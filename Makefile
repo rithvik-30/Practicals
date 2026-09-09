@@ -1,6 +1,8 @@
 CC = gcc
 CFLAGS = -Wall -g
 
+all: prog1 prog2 prog3 prog4 zombie_process
+
 prog1: prog1.c
 	$(CC) $(CFLAGS) -o prog1 prog1.c
 
@@ -10,5 +12,11 @@ prog2: prog2.c
 prog3: prog3.c
 	$(CC) $(CFLAGS) -o prog3 prog3.c
 
+prog4: prog4.c
+	$(CC) $(CFLAGS) -o prog4 prog4.c
+
+zombie_process: zombie_process.c
+	$(CC) $(CFLAGS) -o zombie_process zombie_process.c
+
 clean:
-	rm -f prog1 prog2 prog3
+	rm -f prog1 prog2 prog3 prog4 zombie_process
